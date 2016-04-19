@@ -27,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D0AD0DF1CC662A2007A1925 /* openvision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = openvision.h; path = plugin/openvision.h; sourceTree = "<group>"; };
 		0D59335B1CC327EA00B0302C /* openvision3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openvision3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D59335F1CC327EA00B0302C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0D5933611CC327EA00B0302C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D0AD0E01CC662AE007A1925 /* plugin */ = {
+			isa = PBXGroup;
+			children = (
+				0D0AD0DF1CC662A2007A1925 /* openvision.h */,
+			);
+			name = plugin;
+			sourceTree = "<group>";
+		};
 		0D5933521CC327EA00B0302C = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +100,7 @@
 		0D59335D1CC327EA00B0302C /* openvision3 */ = {
 			isa = PBXGroup;
 			children = (
+				0D0AD0E01CC662AE007A1925 /* plugin */,
 				0D5933611CC327EA00B0302C /* AppDelegate.h */,
 				0D5933621CC327EA00B0302C /* AppDelegate.m */,
 				0D5933641CC327EA00B0302C /* ViewController.h */,
