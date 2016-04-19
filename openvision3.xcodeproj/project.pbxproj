@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D5933601CC327EA00B0302C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D59335F1CC327EA00B0302C /* main.m */; };
 		0D5933631CC327EA00B0302C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5933621CC327EA00B0302C /* AppDelegate.m */; };
-		0D5933661CC327EA00B0302C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5933651CC327EA00B0302C /* ViewController.m */; };
+		0D5933661CC327EA00B0302C /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D5933651CC327EA00B0302C /* ViewController.mm */; };
 		0D5933691CC327EA00B0302C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D5933671CC327EA00B0302C /* Main.storyboard */; };
 		0D59336C1CC327EA00B0302C /* openvision3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D59336A1CC327EA00B0302C /* openvision3.xcdatamodeld */; };
 		0D59336E1CC327EA00B0302C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D59336D1CC327EA00B0302C /* Assets.xcassets */; };
@@ -21,6 +21,9 @@
 		0D5933811CC32D0700B0302C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5933801CC32D0700B0302C /* UIKit.framework */; };
 		0D5933831CC32D4500B0302C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5933821CC32D4500B0302C /* ImageIO.framework */; };
 		0D5933851CC32D4A00B0302C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5933841CC32D4A00B0302C /* QuartzCore.framework */; };
+		0D59338C1CC5AB8B00B0302C /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D59338B1CC5AB8B00B0302C /* opencv2.framework */; };
+		0D59338E1CC5AF4A00B0302C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D59338D1CC5AF4A00B0302C /* CoreMedia.framework */; };
+		0D5933901CC5AF7F00B0302C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D59338F1CC5AF7F00B0302C /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +31,8 @@
 		0D59335F1CC327EA00B0302C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0D5933611CC327EA00B0302C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0D5933621CC327EA00B0302C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0D5933641CC327EA00B0302C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0D5933651CC327EA00B0302C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0D5933641CC327EA00B0302C /* ViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = ViewController.h; sourceTree = "<group>"; };
+		0D5933651CC327EA00B0302C /* ViewController.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		0D5933681CC327EA00B0302C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D59336B1CC327EA00B0302C /* openvision3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = openvision3.xcdatamodel; sourceTree = "<group>"; };
 		0D59336D1CC327EA00B0302C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +45,9 @@
 		0D5933801CC32D0700B0302C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0D5933821CC32D4500B0302C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		0D5933841CC32D4A00B0302C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0D59338B1CC5AB8B00B0302C /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		0D59338D1CC5AF4A00B0302C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		0D59338F1CC5AF7F00B0302C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +55,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D5933901CC5AF7F00B0302C /* AssetsLibrary.framework in Frameworks */,
+				0D59338E1CC5AF4A00B0302C /* CoreMedia.framework in Frameworks */,
+				0D59338C1CC5AB8B00B0302C /* opencv2.framework in Frameworks */,
 				0D5933851CC32D4A00B0302C /* QuartzCore.framework in Frameworks */,
 				0D5933831CC32D4500B0302C /* ImageIO.framework in Frameworks */,
 				0D5933811CC32D0700B0302C /* UIKit.framework in Frameworks */,
@@ -65,13 +74,7 @@
 		0D5933521CC327EA00B0302C = {
 			isa = PBXGroup;
 			children = (
-				0D5933841CC32D4A00B0302C /* QuartzCore.framework */,
-				0D5933821CC32D4500B0302C /* ImageIO.framework */,
-				0D5933801CC32D0700B0302C /* UIKit.framework */,
-				0D59337E1CC32D0000B0302C /* AVFoundation.framework */,
-				0D59337C1CC32CFA00B0302C /* CoreGraphics.framework */,
-				0D59337A1CC32CCB00B0302C /* CoreVideo.framework */,
-				0D5933781CC32CC200B0302C /* CoreImage.framework */,
+				0D5933861CC5A7B700B0302C /* Framework */,
 				0D59335D1CC327EA00B0302C /* openvision3 */,
 				0D59335C1CC327EA00B0302C /* Products */,
 			);
@@ -91,7 +94,7 @@
 				0D5933611CC327EA00B0302C /* AppDelegate.h */,
 				0D5933621CC327EA00B0302C /* AppDelegate.m */,
 				0D5933641CC327EA00B0302C /* ViewController.h */,
-				0D5933651CC327EA00B0302C /* ViewController.m */,
+				0D5933651CC327EA00B0302C /* ViewController.mm */,
 				0D5933671CC327EA00B0302C /* Main.storyboard */,
 				0D59336D1CC327EA00B0302C /* Assets.xcassets */,
 				0D59336F1CC327EA00B0302C /* LaunchScreen.storyboard */,
@@ -108,6 +111,23 @@
 				0D59335F1CC327EA00B0302C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0D5933861CC5A7B700B0302C /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				0D59338F1CC5AF7F00B0302C /* AssetsLibrary.framework */,
+				0D59338D1CC5AF4A00B0302C /* CoreMedia.framework */,
+				0D59338B1CC5AB8B00B0302C /* opencv2.framework */,
+				0D5933841CC32D4A00B0302C /* QuartzCore.framework */,
+				0D5933821CC32D4500B0302C /* ImageIO.framework */,
+				0D5933801CC32D0700B0302C /* UIKit.framework */,
+				0D59337E1CC32D0000B0302C /* AVFoundation.framework */,
+				0D59337C1CC32CFA00B0302C /* CoreGraphics.framework */,
+				0D59337A1CC32CCB00B0302C /* CoreVideo.framework */,
+				0D5933781CC32CC200B0302C /* CoreImage.framework */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +161,7 @@
 				TargetAttributes = {
 					0D59335A1CC327EA00B0302C = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = YXE76ZE493;
 					};
 				};
 			};
@@ -180,7 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D5933661CC327EA00B0302C /* ViewController.m in Sources */,
+				0D5933661CC327EA00B0302C /* ViewController.mm in Sources */,
 				0D59336C1CC327EA00B0302C /* openvision3.xcdatamodeld in Sources */,
 				0D5933631CC327EA00B0302C /* AppDelegate.m in Sources */,
 				0D5933601CC327EA00B0302C /* main.m in Sources */,
@@ -295,10 +316,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = openvision3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhimaabc.openvision3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -306,10 +336,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Honglin Liu (YXE76ZE493)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Honglin Liu (YXE76ZE493)";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = openvision3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhimaabc.openvision3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "455142d0-37b8-4728-a1ba-7ef6a3ec9914";
 			};
 			name = Release;
 		};

@@ -18,15 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dAr-SI-6lg">
-                                <rect key="frame" x="20" y="0.0" width="560" height="600"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dAr-SI-6lg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wCM-V5-cmO" appends="YES" id="YVD-5S-Jeo"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dAr-SI-6lg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="2FV-bN-xqw"/>
-                            <constraint firstItem="dAr-SI-6lg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7p0-an-lak"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dAr-SI-6lg" secondAttribute="trailing" id="94h-wR-clc"/>
+                            <constraint firstItem="dAr-SI-6lg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="7p0-an-lak"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dAr-SI-6lg" secondAttribute="trailing" constant="-20" id="94h-wR-clc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dAr-SI-6lg" secondAttribute="bottom" id="dJd-vK-c8n"/>
                         </constraints>
                     </view>
@@ -35,6 +39,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wCM-V5-cmO">
+                    <connections>
+                        <action selector="switchCamera:" destination="BYZ-38-t0r" id="le0-zO-MCM"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="340" y="377"/>
         </scene>
