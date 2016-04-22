@@ -1,11 +1,15 @@
+/*
+ 计算输入图像的显著图；
+ 显著图为灰度图, 显著图中越亮的地方表示越容易吸引人眼的注意；
+ 算法为经典的Itti方法, 实现基于Aditya Sundararajan等的代码。
+ */
 
-#include "stdafx.h"
 #include "IttiSaliency.h"
 
 // Generate Gaussian Pyramid of intensity image
-void buildGaussianPyramid(Mat &intensity, vector<Mat> &GauPyr)
+void buildGaussianPyramid(Mat &intensity, std::vector<Mat> &GauPyr)
 {
-	vector<Mat> bgr(3);
+	std::vector<Mat> bgr(3);
     
     split(intensity, bgr);	//Split the input image into 3 separate channels and store it in bgr
 	intensity = (bgr[0] + bgr[1] + bgr[2]) / 3;	//Take average of the 3 separated channels. This is the intensity.
@@ -14,7 +18,7 @@ void buildGaussianPyramid(Mat &intensity, vector<Mat> &GauPyr)
 }
 
 //Resize all the images of Feature Map and add them for conspicuity map
-void resizeMap(vector<Mat> &featureMap, Mat &conspicuity) 
+void resizeMap(std::vector<Mat> &featureMap, Mat &conspicuity) 
 {
    	int i;
    	Mat dest;
@@ -32,11 +36,11 @@ void resizeMap(vector<Mat> &featureMap, Mat &conspicuity)
 }
 
 //Generate Feature Maps
-void buildMap(vector<Mat> &pyramid, Mat &conspicuity)
+void buildMap(std::vector<Mat> &pyramid, Mat &conspicuity)
 {
     int i, c, del, j;
     Mat src, dest;
-    vector<Mat> featureMap(6);
+    std::vector<Mat> featureMap(6);
 
     i = 0;
 
@@ -61,12 +65,12 @@ void buildMap(vector<Mat> &pyramid, Mat &conspicuity)
 }
 
 //Generate Red, Green, Blue, and Yellow maps required for Color Map
-void buildRGBY(Mat &intensity, Mat &imageCopy, vector<Mat> &R_GauPyr, vector<Mat> &G_GauPyr, vector<Mat> &B_GauPyr, vector<Mat> &Y_GauPyr)
+void buildRGBY(Mat &intensity, Mat &imageCopy, std::vector<Mat> &R_GauPyr, std::vector<Mat> &G_GauPyr, std::vector<Mat> &B_GauPyr, std::vector<Mat> &Y_GauPyr)
 {
 	double maxVal;
 	int i, j;
 	Vec3b zero(0, 0, 0);
-	vector<Mat> channel(3);
+	std::vector<Mat> channel(3);
 
 	//Normalize the input image	
 	minMaxLoc(intensity, NULL, &maxVal, NULL, NULL);
@@ -110,7 +114,7 @@ void buildRGBY(Mat &intensity, Mat &imageCopy, vector<Mat> &R_GauPyr, vector<Mat
 
 
 //Generate Intensity Map
-void buildIntensityMap(vector<Mat> &GauPyr, Mat &I_bar)
+void buildIntensityMap(std::vector<Mat> &GauPyr, Mat &I_bar)
 {
     buildMap(GauPyr, I_bar);
 }
@@ -118,14 +122,14 @@ void buildIntensityMap(vector<Mat> &GauPyr, Mat &I_bar)
 //Generate Color Map
 void buildColorMap(Mat &intensity, Mat &imageCopy, Mat &C_bar)
 {
-    vector<Mat> R_GauPyr(9);
-	vector<Mat> G_GauPyr(9);
-	vector<Mat> B_GauPyr(9);
-	vector<Mat> Y_GauPyr(9);
+    std::vector<Mat> R_GauPyr(9);
+	std::vector<Mat> G_GauPyr(9);
+	std::vector<Mat> B_GauPyr(9);
+	std::vector<Mat> Y_GauPyr(9);
 
-    vector<Mat> RG(6);
-	vector<Mat> BY(6);
-	vector<Mat> colorMap(6);
+    std::vector<Mat> RG(6);
+	std::vector<Mat> BY(6);
+	std::vector<Mat> colorMap(6);
 
 	Mat temp1, temp2, src, dest;
 
@@ -169,13 +173,13 @@ void buildColorMap(Mat &intensity, Mat &imageCopy, Mat &C_bar)
 //Generate Orientation Map
 void buildOrientationMap(Mat &intensity, Mat &O_bar)
 {
-    vector<Mat> kernel(4);
-	vector<Mat> gaborImage(4);
+    std::vector<Mat> kernel(4);
+	std::vector<Mat> gaborImage(4);
 
-	vector<Mat> GauPyr_0(9);
-	vector<Mat> GauPyr_45(9);
-	vector<Mat> GauPyr_90(9);
-	vector<Mat> GauPyr_135(9);
+	std::vector<Mat> GauPyr_0(9);
+	std::vector<Mat> GauPyr_45(9);
+	std::vector<Mat> GauPyr_90(9);
+	std::vector<Mat> GauPyr_135(9);
 
 	Mat totalOriMap_0, totalOriMap_45, totalOriMap_90, totalOriMap_135;
     int theta,  j = 0;
@@ -217,7 +221,7 @@ void buildSaliencyMap(Mat &I_bar,  Mat &C_bar,  Mat &O_bar,  Mat &SalicencyMap)
 
 void SaliencyDetection(Mat &image, Mat &SaliencyMap)//image is input, SaliencyMap is output
 {
-	vector<Mat> GauPyr(9);
+	std::vector<Mat> GauPyr(9);
 	Mat I_bar, C_bar, O_bar;
 	Mat imageCopy = image;
 	SaliencyMap = image;	   			

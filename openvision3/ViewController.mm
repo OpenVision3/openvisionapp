@@ -48,8 +48,13 @@
 #ifdef __cplusplus
 - (void)processImage:(cv::Mat&)image;
 {
+    cv::Mat outputMat;
+    SaliencyDetection(image,outputMat);
+    image = outputMat;
+    
     cv::putText(image, "Hello, please add your opencv code at there!", cvPoint(30,30),
                 cv::FONT_HERSHEY_SIMPLEX, 0.8, cvScalar(255,0,0), 1, CV_AA,false);
+    
 }
 #endif
 

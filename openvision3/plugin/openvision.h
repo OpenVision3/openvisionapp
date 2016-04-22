@@ -9,5 +9,6 @@
 #ifndef openvision_h
 #define openvision_h
 
+#include "./IttiSaliency/IttiSaliency.h"
 
 #endif /* openvision_h */

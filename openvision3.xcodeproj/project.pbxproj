@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0AD0E71CC9B128007A1925 /* IttiSaliency.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D0AD0E51CC9B128007A1925 /* IttiSaliency.cpp */; };
 		0D5933601CC327EA00B0302C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D59335F1CC327EA00B0302C /* main.m */; };
 		0D5933631CC327EA00B0302C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5933621CC327EA00B0302C /* AppDelegate.m */; };
 		0D5933661CC327EA00B0302C /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D5933651CC327EA00B0302C /* ViewController.mm */; };
@@ -28,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		0D0AD0DF1CC662A2007A1925 /* openvision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = openvision.h; path = plugin/openvision.h; sourceTree = "<group>"; };
+		0D0AD0E51CC9B128007A1925 /* IttiSaliency.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IttiSaliency.cpp; path = plugin/IttiSaliency/IttiSaliency.cpp; sourceTree = "<group>"; };
+		0D0AD0E61CC9B128007A1925 /* IttiSaliency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IttiSaliency.h; path = plugin/IttiSaliency/IttiSaliency.h; sourceTree = "<group>"; };
 		0D59335B1CC327EA00B0302C /* openvision3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openvision3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D59335F1CC327EA00B0302C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0D5933611CC327EA00B0302C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,9 +78,19 @@
 		0D0AD0E01CC662AE007A1925 /* plugin */ = {
 			isa = PBXGroup;
 			children = (
+				0D0AD0E41CC9AF04007A1925 /* IttiSaliency */,
 				0D0AD0DF1CC662A2007A1925 /* openvision.h */,
 			);
 			name = plugin;
+			sourceTree = "<group>";
+		};
+		0D0AD0E41CC9AF04007A1925 /* IttiSaliency */ = {
+			isa = PBXGroup;
+			children = (
+				0D0AD0E51CC9B128007A1925 /* IttiSaliency.cpp */,
+				0D0AD0E61CC9B128007A1925 /* IttiSaliency.h */,
+			);
+			name = IttiSaliency;
 			sourceTree = "<group>";
 		};
 		0D5933521CC327EA00B0302C = {
@@ -211,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D0AD0E71CC9B128007A1925 /* IttiSaliency.cpp in Sources */,
 				0D5933661CC327EA00B0302C /* ViewController.mm in Sources */,
 				0D59336C1CC327EA00B0302C /* openvision3.xcdatamodeld in Sources */,
 				0D5933631CC327EA00B0302C /* AppDelegate.m in Sources */,
