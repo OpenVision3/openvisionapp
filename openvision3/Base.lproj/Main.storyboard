@@ -19,22 +19,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dAr-SI-6lg">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="wCM-V5-cmO" appends="YES" id="YVD-5S-Jeo"/>
                                 </connections>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TKO-fU-NFY">
+                                <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dAr-SI-6lg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="2FV-bN-xqw"/>
-                            <constraint firstItem="dAr-SI-6lg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="7p0-an-lak"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dAr-SI-6lg" secondAttribute="trailing" constant="-20" id="94h-wR-clc"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dAr-SI-6lg" secondAttribute="bottom" id="dJd-vK-c8n"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TKO-fU-NFY" secondAttribute="bottom" id="3Oo-du-lM7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dAr-SI-6lg" secondAttribute="trailing" constant="-20" id="AVf-rP-AlR"/>
+                            <constraint firstItem="dAr-SI-6lg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="D7f-xS-UkQ"/>
+                            <constraint firstItem="TKO-fU-NFY" firstAttribute="top" secondItem="dAr-SI-6lg" secondAttribute="bottom" id="VwO-yT-Epi"/>
+                            <constraint firstItem="TKO-fU-NFY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="cfU-xl-6Wr"/>
+                            <constraint firstItem="dAr-SI-6lg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="clc-i6-Pmh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TKO-fU-NFY" secondAttribute="trailing" constant="-20" id="gfK-Gs-2Rg"/>
+                            <constraint firstItem="TKO-fU-NFY" firstAttribute="height" secondItem="dAr-SI-6lg" secondAttribute="height" id="oWf-Wd-a3t"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="vImageOutput" destination="TKO-fU-NFY" id="hbr-fV-x3c"/>
                         <outlet property="vImagePreview" destination="dAr-SI-6lg" id="9Ez-wl-rer"/>
                     </connections>
                 </viewController>
