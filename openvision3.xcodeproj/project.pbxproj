@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0D0AD0E71CC9B128007A1925 /* IttiSaliency.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D0AD0E51CC9B128007A1925 /* IttiSaliency.cpp */; };
+		0D0AD1841CDF6BF2007A1925 /* facedetect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D0AD1831CDF6BF2007A1925 /* facedetect.cpp */; };
+		0D0AD1881CDF6DA3007A1925 /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0D0AD1871CDF6DA3007A1925 /* haarcascade_frontalface_alt.xml */; };
 		0D5933601CC327EA00B0302C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D59335F1CC327EA00B0302C /* main.m */; };
 		0D5933631CC327EA00B0302C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5933621CC327EA00B0302C /* AppDelegate.m */; };
 		0D5933661CC327EA00B0302C /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D5933651CC327EA00B0302C /* ViewController.mm */; };
@@ -31,6 +33,9 @@
 		0D0AD0DF1CC662A2007A1925 /* openvision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = openvision.h; path = plugin/openvision.h; sourceTree = "<group>"; };
 		0D0AD0E51CC9B128007A1925 /* IttiSaliency.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IttiSaliency.cpp; path = plugin/IttiSaliency/IttiSaliency.cpp; sourceTree = "<group>"; };
 		0D0AD0E61CC9B128007A1925 /* IttiSaliency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IttiSaliency.h; path = plugin/IttiSaliency/IttiSaliency.h; sourceTree = "<group>"; };
+		0D0AD1831CDF6BF2007A1925 /* facedetect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = facedetect.cpp; path = plugin/FaceDetect/facedetect.cpp; sourceTree = "<group>"; };
+		0D0AD1851CDF6C17007A1925 /* facedetect.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = facedetect.hpp; path = plugin/FaceDetect/facedetect.hpp; sourceTree = "<group>"; };
+		0D0AD1871CDF6DA3007A1925 /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = haarcascade_frontalface_alt.xml; path = plugin/FaceDetect/haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
 		0D59335B1CC327EA00B0302C /* openvision3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openvision3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D59335F1CC327EA00B0302C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0D5933611CC327EA00B0302C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +83,7 @@
 		0D0AD0E01CC662AE007A1925 /* plugin */ = {
 			isa = PBXGroup;
 			children = (
+				0D0AD1821CDF6B4E007A1925 /* FaceDetect */,
 				0D0AD0E41CC9AF04007A1925 /* IttiSaliency */,
 				0D0AD0DF1CC662A2007A1925 /* openvision.h */,
 			);
@@ -91,6 +97,24 @@
 				0D0AD0E61CC9B128007A1925 /* IttiSaliency.h */,
 			);
 			name = IttiSaliency;
+			sourceTree = "<group>";
+		};
+		0D0AD1821CDF6B4E007A1925 /* FaceDetect */ = {
+			isa = PBXGroup;
+			children = (
+				0D0AD1861CDF6D93007A1925 /* Resource */,
+				0D0AD1831CDF6BF2007A1925 /* facedetect.cpp */,
+				0D0AD1851CDF6C17007A1925 /* facedetect.hpp */,
+			);
+			name = FaceDetect;
+			sourceTree = "<group>";
+		};
+		0D0AD1861CDF6D93007A1925 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				0D0AD1871CDF6DA3007A1925 /* haarcascade_frontalface_alt.xml */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 		0D5933521CC327EA00B0302C = {
@@ -213,6 +237,7 @@
 			files = (
 				0D5933711CC327EA00B0302C /* LaunchScreen.storyboard in Resources */,
 				0D59336E1CC327EA00B0302C /* Assets.xcassets in Resources */,
+				0D0AD1881CDF6DA3007A1925 /* haarcascade_frontalface_alt.xml in Resources */,
 				0D5933691CC327EA00B0302C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +254,7 @@
 				0D59336C1CC327EA00B0302C /* openvision3.xcdatamodeld in Sources */,
 				0D5933631CC327EA00B0302C /* AppDelegate.m in Sources */,
 				0D5933601CC327EA00B0302C /* main.m in Sources */,
+				0D0AD1841CDF6BF2007A1925 /* facedetect.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,5 +10,6 @@
 #define openvision_h
 
 #include "./IttiSaliency/IttiSaliency.h"
+#include "./FaceDetect/facedetect.hpp"
 
 #endif /* openvision_h */

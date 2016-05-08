@@ -9,6 +9,10 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+{
+    CascadeClassifier face_cascade;
+    int plugin;
+}
 @property (weak, nonatomic) IBOutlet UIImageView *vImagePreview;
 @property (weak, nonatomic) IBOutlet UIImageView *vImageOutput;
 
@@ -26,7 +30,13 @@
     self.videoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
     self.videoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288;
     self.videoCamera.defaultFPS = 15;
+
+    plugin = 0;
     
+    NSString* cascadePath = [[NSBundle mainBundle]
+                             pathForResource:@"haarcascade_frontalface_alt"
+                             ofType:@"xml"];
+    face_cascade.load([cascadePath UTF8String]);
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -54,6 +64,13 @@
     leftPreviewLayer.videoGravity = AVLayerVideoGravityResize;
     [self.vImagePreview.layer addSublayer:leftPreviewLayer];
 }
+- (IBAction)switchOutput:(id)sender {
+    if (plugin == 0 ) {
+        plugin = 1;
+    } else {
+        plugin = 0;
+    }
+}
 
 #pragma mark - Protocol CvVideoCameraDelegate
 
@@ -63,11 +80,26 @@
     cv::Size strel_size;
     strel_size = image.size();
     char str[200];
-    sprintf(str,"%d x %d IttiSaliency",strel_size.width, strel_size.height);
-    cv::Mat outputMat;
-    SaliencyDetection(image,outputMat);
-    image = outputMat;
     
+    switch(plugin) {
+        case 0:
+        {
+            sprintf(str,"%d x %d FaceDetect",strel_size.width, strel_size.height);
+            detectAndDisplay(image, face_cascade);
+            break;
+        }
+        case 1:
+        {
+            sprintf(str,"%d x %d IttiSaliency",strel_size.width, strel_size.height);
+            cv::Mat outputMat;
+            SaliencyDetection(image,outputMat);
+            image = outputMat;
+            break;
+        }
+        default:
+            sprintf(str,"%d x %d",strel_size.width, strel_size.height);
+            break;
+    }
     cv::putText(image, str, cvPoint(10,20),
                 cv::FONT_HERSHEY_PLAIN, 0.8, cvScalar(255,0,0), 1, CV_AA,false);
 }

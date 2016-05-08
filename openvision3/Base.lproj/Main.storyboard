@@ -25,8 +25,12 @@
                                     <outletCollection property="gestureRecognizers" destination="wCM-V5-cmO" appends="YES" id="YVD-5S-Jeo"/>
                                 </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TKO-fU-NFY">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TKO-fU-NFY">
                                 <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="77p-dg-vbz" appends="YES" id="Ajb-M3-hXb"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -52,6 +56,11 @@
                         <action selector="switchCamera:" destination="BYZ-38-t0r" id="le0-zO-MCM"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="77p-dg-vbz">
+                    <connections>
+                        <action selector="switchOutput:" destination="BYZ-38-t0r" id="sJg-RR-9OL"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="340" y="377"/>
         </scene>
